@@ -5,7 +5,7 @@ network_name=$( /System/Library/PrivateFrameworks/Apple80211.framework/Versions/
 
 if netstat -nr -f inet | grep gpd0 > /dev/null; then
 	echo "#[bg=colour70,fg=colour255] VPN "
-elif ifconfig | grep -A2 -F utun | grep -E 'inet (172\.141\.|10\.89\.)' > /dev/null; then
+elif ifconfig | grep -A2 -F utun | grep -E 'inet (172\.141\.|10\.89\.|10\.0\.)' > /dev/null; then
 	echo "#[bg=colour53,fg=colour255] VPN "
 elif [[ $network_name == "extended-stay" ]]; then
 	echo "#[bg=colour0,fg=colour75] WiFi "
